@@ -1,4 +1,4 @@
-module www.github.com/Andrew-Morozko/stignore
+module github.com/Andrew-Morozko/stignore
 
 go 1.18
 
