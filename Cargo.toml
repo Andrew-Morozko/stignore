@@ -1,0 +1,25 @@
+[package]
+name = "stignore"
+version = "1.0.0"
+edition = "2021"
+authors = ["Andrew Morozko"]
+homepage = "https://github.com/Andrew-Morozko/stignore"
+repository = "https://github.com/Andrew-Morozko/stignore.git"
+license = "MIT OR Apache-2.0"
+description = "Add syncthing ignore patterns from command line"
+keywords = ["syncthing", "cli-utility"]
+categories = ["command-line-utilities", "config", "filesystem"]
+readme = "README.md"
+
+
+[dependencies]
+anyhow = "1.0.62"
+clap = { version = "3.2.18", features = ["derive"] }
+regex = "1.6.0"
+question = "0.2.2"
+
+[profile.release]
+opt-level = "z"
+strip = "symbols"
+codegen-units = 1
+lto = true
